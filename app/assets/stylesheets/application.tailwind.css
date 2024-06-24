@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+div[content]>div>div {
+  @apply space-y-3;
+}
+
+div[content]>div>div>pre {
+  @apply px-5;
+}
+
+div[content]>div>div>h2 {
+  @apply text-3xl;
+}
+
+div[content]>div>div>h3 {
+  @apply text-2xl;
+}

@@ -1,6 +1,6 @@
 <div class="mdc-card mdc-card--outlined max-w-md" id=<%= dom_id(link) %>>
   <div class="p-[16px]">
-    <%= link_to link.url, page_path(link) %>
+    <%= link_to link.url, link_path(link) %>
   </div>
   <div class="mdc-card__actions">
     <%= form_with model: link, builder: MaterialFormBuilder, method: :delete, data: { controller: "material-form" }, html: { class: "inline mdc-card__action" } do |f| %>

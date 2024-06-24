@@ -1,7 +1,5 @@
-<div class="flex flex-row w-full justify-center" id="<%= dom_id(link, :page) %>">
-  <h1 class="text-3xl pb-4"><%= title %></h1>
-  <iframe class="h-screen w-3/5" sandbox>
+<%= turbo_stream_from user.identity, [:page, link.id], channel: PageChannel %>
 
-  </iframe>
+<div class="flex flex-row w-full justify-center">
+  <%= render partial: 'page', locals: { user:, link:, content: '<script><p>test</p></script><p>test</p>', title: 'Loading...' } %>
 </div>
-<%= turbo_stream_from user.identity, :page, channel: PageChannel %>
